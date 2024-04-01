@@ -1,0 +1,5 @@
+---
+# vars file for roles/nginx
+container_name: nginx
+container_port: 8080
+restart_policy: always
