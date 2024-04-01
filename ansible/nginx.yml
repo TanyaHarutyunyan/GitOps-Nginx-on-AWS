@@ -1,0 +1,6 @@
+- name: NGINX
+  become: true
+  hosts: Nginx
+  roles:
+    - docker
+    - nginx
