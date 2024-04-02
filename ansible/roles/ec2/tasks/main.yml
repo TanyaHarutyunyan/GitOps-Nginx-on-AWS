@@ -11,9 +11,13 @@
       - proto: tcp
         ports:
           - 22
+        cidr_ip: 0.0.0.0/0
+        rule_desc: Allow on ssh and {{ security_group_port }} port
+      - proto: tcp
+        ports:
           - "{{ security_group_port }}"
         cidr_ip: 0.0.0.0/0
-        rule_desc: Allow on ssh and {{ security_group_port }} ports
+        rule_desc: Allow on {{ security_group_port }} port
 
 - name: Create ec2 instance
   amazon.aws.ec2_instance:
