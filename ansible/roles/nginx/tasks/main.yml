@@ -3,7 +3,7 @@
 - name: Create NGINX container
   docker_container:
     name: "{{ container_name }}"
-    image: {{ image_name }}:{{ image_tag }}
+    image: "{{ image_name }}:{{ image_tag }}"
     recreate: yes
     ports:
       - "{{ container_port }}:80"
