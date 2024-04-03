@@ -12,7 +12,7 @@
         ports:
           - 22
         cidr_ip: 0.0.0.0/0
-        rule_desc: Allow on ssh and {{ security_group_port }} port
+        rule_desc: Allow on ssh port
       - proto: tcp
         ports:
           - "{{ security_group_port }}"
