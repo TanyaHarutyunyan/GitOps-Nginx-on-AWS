@@ -1,13 +1,14 @@
 name: NGINX
 env:
-  IMAGE_NAME: "tanyaharutyunyan/nginx"
+  IMAGE_NAME: tanyaharutyunyan/nginx
   IMAGE_TAG: ${{ github.run_number }}
+  TARGET_BRANCH: master
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ ${{ env.TARGET_BRANCH }} ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ ${{ env.TARGET_BRANCH }} ]
 
   workflow_dispatch:
 
